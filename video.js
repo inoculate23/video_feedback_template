@@ -11,7 +11,7 @@ const Video = {
 
 
 
-      Video.element = video
+      Video = video
      // Video.hasPermissions = true
       // note that one is lowercase and we need both!
  const captureStream = video.captureStream();
