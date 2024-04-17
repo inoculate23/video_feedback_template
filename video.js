@@ -19,7 +19,7 @@ const stream = video2.captureStream();
 video.srcObject = stream;
     
       Video.srcObject = stream
-      await video.play()
+      await start( video )
       return true
     }else{
       console.warning( 'No video feed / webcam detected.' )
