@@ -1,8 +1,10 @@
+   const video2 = document.getElementById('video2');
+
 const Video = {
   element:null,
   hasPermissions: false,
   async init() {
-     const video2 = document.getElementById('video2');
+  
     const video = document.createElement('video');
     video.style.display = 'none'
     document.body.appendChild( video )
@@ -11,7 +13,7 @@ const Video = {
 
 
 
-      Video = video
+     // Video = video
      // Video.hasPermissions = true
       // note that one is lowercase and we need both!
  const captureStream = video.captureStream();
