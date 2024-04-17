@@ -1,8 +1,7 @@
    const video2 = document.getElementById('video2');
 
 const Video = {
-  element:null,
-  hasPermissions: false,
+ //hasPermissions: false,
   async init() {
   
     const video = document.createElement('video');
