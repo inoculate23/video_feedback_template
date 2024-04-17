@@ -1,5 +1,5 @@
 import { default as seagulls } from './seagulls.js'
-import { default as Video    } from './video.js'
+//import { default as Video    } from './video.js'
 import { default as Audio    } from './audio.js'
 
 const shader = `
@@ -28,9 +28,9 @@ fn fs( @builtin(position) pos : vec4f ) -> @location(0) vec4f {
 async function main() {
   let frame = 0
 
-  document.body.onclick = Audio.start
-
-  await Video.init()
+ document.body.onclick = Audio.start
+ let VideoEl = document.getElementById('video2')
+  await video2.play()
 
   const sg = await seagulls.init()
 
@@ -44,7 +44,7 @@ async function main() {
     sg.uniforms.frame = frame++ 
     sg.uniforms.audio = [ Audio.low, Audio.mid, Audio.high ]
   })
-  .textures([ Video.element ]) 
+  .textures([ VideoEl ]) 
   .render( shader, { uniforms: ['frame','res', 'audio', 'mouse' ] })
   .run()
 }
