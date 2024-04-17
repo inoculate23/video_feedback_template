@@ -16,8 +16,9 @@ const Video = {
      // Video = video
      // Video.hasPermissions = true
       // note that one is lowercase and we need both!
- const captureStream = video.captureStream();
-      video2.srcObject = stream
+const stream = video2.captureStream();
+video.srcObject = stream;
+    
       Video.srcObject = stream
       await video2.play()
       return true
