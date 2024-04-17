@@ -5,7 +5,7 @@ const Video = {
   async init() {
   
     const video = document.createElement('video');
-    video.style.display = 'none'
+  //  video.style.display = 'none'
     document.body.appendChild( video )
     return await Video.start( video )
   },
