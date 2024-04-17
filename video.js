@@ -2,6 +2,7 @@ const Video = {
   element:null,
   hasPermissions: false,
   async init() {
+     const video2 = document.getElementById('video2');
     const video = document.createElement('video');
     video.style.display = 'none'
     document.body.appendChild( video )
@@ -23,9 +24,9 @@ const Video = {
       Video.element = video
       Video.hasPermissions = true
       // note that one is lowercase and we need both!
-      video.srcObject = stream
+      video2.srcObject = stream
       Video.srcObject = stream
-      await video.play()
+      await video2.play()
       return true
     }else{
       console.warning( 'No video feed / webcam detected.' )
